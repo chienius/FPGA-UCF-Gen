@@ -69,15 +69,15 @@ function genUcf() {
         }
     });
     if(!r) {
-        $('textarea').val('').text('// Empty input');
+        $('textarea').text('// Empty input');
     } else {
-        $('textarea').val('').text(r);
+        $('textarea').text(r);
     }
 }
 
 function clearUcf() {
     if( confirm('Are you sure you want to clear UCF?') ) {
         $('input').val('');
-        $('textarea').val('').text(textarea_placeholder);
+        $('textarea').text(textarea_placeholder);
     }
 }
