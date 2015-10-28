@@ -60,24 +60,24 @@ function genUcf() {
         var val = $(this).val();
         var pin = $(this).attr('data-pin');
         if(val!=''){
-            r += 'NET '+val;
+            r += 'NET '+val+' ';
             if(conf.iostd) {
-                r += ' \t IOSTANDARD = '+conf.iostd+' | ';
+                r += 'IOSTANDARD = '+conf.iostd+' | ';
             }
             r += 'LOC = '+pin
             r += ';\n';
         }
     });
     if(!r) {
-        $('textarea').text('// Empty input');
+        $('textarea').val('').text('// Empty input');
     } else {
-        $('textarea').text(r);
+        $('textarea').val('').text(r);
     }
 }
 
 function clearUcf() {
     if( confirm('Are you sure you want to clear UCF?') ) {
         $('input').val('');
-        $('textarea').text(textarea_placeholder);
+        $('textarea').val('').text(textarea_placeholder);
     }
 }
