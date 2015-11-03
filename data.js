@@ -46,6 +46,6 @@ pins = {
 }
 
 conf = {
-    'iostd': 'LVCMOS18',
-    'board': 'Artix-7'
+    'iostd': 'LVCMOS33',
+    'board': 'Nexys 4 DDR'
 }
