@@ -66,8 +66,9 @@ function genUcf() {
                 r += 'IOSTANDARD = '+conf.iostd+' | ';
             }
             r += 'LOC = '+pin;
+            r += ';';
             r += '     // ' + name;
-            r += ';\n';
+            r += '\n';
         }
     });
     if(!r) {
